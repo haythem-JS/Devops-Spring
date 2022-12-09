@@ -38,13 +38,13 @@ pipeline {
                 }
             }
         }
-//         stage("SonarQube Testing and Scan") {
-//             steps {
-//                 script {
-//                     gv.sonarScan("${SONARQUBE_SERVER_IP}","${SONARQUBE_SERVER_USER}")
-//                 }
-//             }
-//         }
+        stage("SonarQube Testing and Scan") {
+            steps {
+                script {
+                    gv.sonarScan("${SONARQUBE_SERVER_IP}","${SONARQUBE_SERVER_USER}")
+                }
+            }
+        }
         stage("Push JAR to Nexus"){
             steps {
                 script {
