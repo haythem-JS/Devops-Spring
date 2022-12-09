@@ -15,10 +15,10 @@ def pushToNexus() {
 
 def sonarScan(String serverIp, String serverUser) {
     echo "Running sonarQube scan..."
-//    sh "set MYSQLDB_ROOT_PASSWORD root"
-//    sh "set  MYSQLDB_DATABASE school"
-//    sh "set MYSQLDB_LOCAL_PORT 3306"
-//    sh "set MYSQLDB_DOCKER_PORT 3306"
+    sh "set MYSQLDB_ROOT_PASSWORD root"
+    sh "set  MYSQLDB_DATABASE school"
+    sh "set MYSQLDB_LOCAL_PORT 3306"
+    sh "set MYSQLDB_DOCKER_PORT 3306"
     sh 'mvn sonar:sonar `-Dsonar.projectKey=Devops_spring `-Dsonar.host.url=http://localhost:9000/ `-Dsonar.login=beb2521919d74495ecd0a0961d9bd5b37c2458d4'
 //    sshagent (credentials: ['sonar-server']) {
 //        sh "ssh -o StrictHostKeyChecking=no ${serverUser}@${serverIp} ${runSonar}"
