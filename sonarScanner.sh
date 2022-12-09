@@ -1,4 +1,4 @@
 mvn sonar:sonar \
-  -Dsonar.projectKey=Devops_spring \
+  -Dsonar.projectKey=Devops \
   -Dsonar.host.url=http://localhost:9000 \
   -Dsonar.login=admin
